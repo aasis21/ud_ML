@@ -19,4 +19,22 @@ import pickle
 
 enron_data = pickle.load(open("../final_project/final_project_dataset.pkl", "r"))
 
+print len(enron_data)
+
+print len(enron_data["SKILLING JEFFREY K"])
+
+print enron_data["SKILLING JEFFREY K"]
+ct=0
+for per in enron_data:
+    if enron_data[per]["poi"] == 1:
+        ct += 1
+
+print ct
+
+print enron_data["PRENTICE JAMES"]["total_stock_value"]
+
+print enron_data["COLWELL WESLEY"]["from_this_person_to_poi"]
+
+
+print enron_data["SKILLING JEFFREY K"]["exercised_stock_options"]
 

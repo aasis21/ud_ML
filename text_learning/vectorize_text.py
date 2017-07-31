@@ -48,6 +48,17 @@ for name, from_person in [("sara", from_sara), ("chris", from_chris)]:
             email = open(path, "r")
 
             ### use parseOutText to extract the text from the opened email
+            parsed_mail = parseOutText(email)
+
+            parsed_mail.replace(["sara", "shackleton", "chris", "germani"])
+
+            data = parsed_mail.split(" ")
+            for word in data:
+                word_data.append(word)
+                if name == "sara":
+                    from_data.append(0)
+                else:
+                    from_data.append(1)
 
             ### use str.replace() to remove any instances of the words
             ### ["sara", "shackleton", "chris", "germani"]

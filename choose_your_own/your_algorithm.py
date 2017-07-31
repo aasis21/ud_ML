@@ -28,8 +28,15 @@ plt.show()
 ################################################################################
 
 
+
+
+from sklearn import neighbors
+clf = neighbors.KNeighborsClassifier(n_neighbors=3)
+clf.fit(features_train, labels_train)
+acc = clf.score(features_test, labels_test)
 ### your code here!  name your classifier object clf if you want the 
 ### visualization code (prettyPicture) to show you the decision boundary
+print acc
 
 
 
